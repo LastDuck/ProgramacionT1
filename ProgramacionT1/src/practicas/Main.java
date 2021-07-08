@@ -40,6 +40,7 @@ public class Main {
 		Scanner lector =new Scanner(System.in);   //creacion de objeto scanner
 		
 		int v1=lector.nextInt();
+	
 		if(v1<300) {
 			System.out.println("Su bonificacion es de : 50");
 		}else {
