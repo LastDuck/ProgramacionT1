@@ -55,10 +55,11 @@ public class G1 {
 				
 		if(MesN==MesA) {    //mes
 			
-			mes=(MesA-MesN)+12;
+			mes=(MesA-MesN);
 			
 		}else if(MesN>MesA) {
 			mes=12-(MesN-MesA);
+			
 		}else if(MesN<MesA) {
 			mes=(MesA-MesN);
 		}
