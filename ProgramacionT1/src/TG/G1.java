@@ -25,7 +25,7 @@ public class G1 {
 		AñoN = lector.nextInt();
 		System.out.print("mes Nacimiento:");
 		MesN = lector.nextInt();
-		System.out.print("dia Nacimiento:");
+		System.out.print("dia Nacimiento :");
 		diaN = lector.nextInt();
 
 		System.out.printf("fecha Nacimiento: %d/%d/%d ", AñoN, MesN, diaN);
