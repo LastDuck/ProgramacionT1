@@ -14,7 +14,7 @@ public class G1 {
 		int dias_mes_actual = 0;
 	
 		Scanner lector = new Scanner(System.in);
-		System.out.println("\tCalculadora  de Edad>>");
+		System.out.println("\tv<<Calculadora  de Edad>>");
 		System.out.println();
 		System.out.print("Año Actual:");AñoA = lector.nextInt();System.out.print("Mes Actual:");MesA = lector.nextInt();
 		System.out.print("Dia Actual:");diaA = lector.nextInt();
