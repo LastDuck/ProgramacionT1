@@ -7,99 +7,94 @@ public class G1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int AñoA = 2021,AñoN;
-		int MesA = 7,MesN,mes=0;
-		int diaA = 12,diaN,dia=0;
-		int edad=0;
-		int dias_mes_actual=0;
-
-		Scanner lector=new Scanner(System.in);
-		System.out.printf("fecha actual: %d/%d/%d ",AñoA,MesA,diaA);
+		int AñoA  , AñoN;
+		int MesA, MesN, mes = 0;
+		int diaA , diaN, dia = 0;
+		int edad = 0;
+		int dias_mes_actual = 0;
+	
+		Scanner lector = new Scanner(System.in);
+		System.out.println("\tCalculadora  de Edad>>");
+		System.out.println();
+		System.out.print("Año Actual:");AñoA = lector.nextInt();System.out.print("Mes Actual:");MesA = lector.nextInt();
+		System.out.print("Dia Actual:");diaA = lector.nextInt();
+		
+		System.out.printf("fecha actual: %d/%d/%d ", AñoA, MesA, diaA);
 		System.out.println();
 		System.out.print("año Nacimiento:");
-		AñoN=lector.nextInt();
+		AñoN = lector.nextInt();
 		System.out.print("mes Nacimiento:");
-		MesN=lector.nextInt();
+		MesN = lector.nextInt();
 		System.out.print("dia Nacimiento:");
-		diaN=lector.nextInt();
-	
-		System.out.printf("fecha Nacimiento: %d/%d/%d ",AñoN,MesN,diaN);
-		System.out.println();
-	
-		edad=AñoA-AñoN;
-	
-		if(MesN>MesA) {
-			edad=edad-1;               //edad
-		}else if(MesN==MesA) {
-			if(diaN>diaA) {
-				edad=edad-1;
-			}else {
-				edad=edad;
-			}
-		}
-		
-		
-		int dias_mes_nacimiento = 0;
-		if ((MesN == 1 || MesN == 3 || MesN == 5 || MesN == 7 || MesN == 8 || MesN == 10 || MesN == 12)||(MesA == 1 || MesA == 3 || MesA == 5 || MesA == 7 || MesA == 8 || MesA == 10 || MesA == 12)) {
-			   dias_mes_nacimiento = 31;
-			
-		}else  if ((MesN == 4 || MesN == 6 || MesN == 9 || MesN == 11)||(MesA == 4 || MesA == 6 || MesA == 9 || MesA == 11)) {
-			   dias_mes_nacimiento = 30;
-			
-			}if (MesN == 2 && AñoN % 4 == 0) {
-				dias_mes_nacimiento = 29;
-			} else if (MesN == 2 && AñoN % 4 != 0) {
-			dias_mes_nacimiento = 28;
-			}
-			
-				
-		if(MesN==MesA) {    //mes
-			
-			mes=(MesA-MesN);
-			
-		}else if(MesN>MesA) {
-			mes=12-(MesN-MesA);
-			
-		}else if(MesN<MesA) {
-			mes=(MesA-MesN);
-		}
-			
-		
-		  if(MesN==2 || MesA==2) {   //dia
-			 if(diaN<=28 || diaA<=28) {
-				 if(diaN==diaA) {
-					 dia=diaN-diaA;
-				 }else if(diaN>diaA) {
-					 dia=-diaN+(diaA+dias_mes_nacimiento);
-				 }else if(diaN<diaA) {
-					 dia=-(diaA-diaN)+dias_mes_nacimiento;
-				 }
-			 }else if(diaN==29 || diaA==29) {
-			
-				 if(diaN==diaA) {
-					 dia=diaN-diaA;
-				 }else if(diaN>diaA) {
-					 dia=-diaN+(diaA+dias_mes_nacimiento);
-				 }else if(diaN<diaA) {
-					 dia=-(diaA-diaN)+dias_mes_nacimiento;
-				 }
-			 }
-		  }else if(MesN!=2 && MesA!=2) {
-			  if(diaN<=31 || diaA<=31) {
-				  if(diaN==diaA) {
-						 dia=diaN-diaA;
-					 }else if(diaN>diaA) {
-						 MesN=dias_mes_nacimiento;
-						 dia=dias_mes_nacimiento-diaN+diaA;
-					 }else if(diaN<diaA) {
-						 dia=(diaA-diaN);
-					 }
-		  
-			  }
-		  }
-		System.out.printf("Su edad es: %d años,%d meses ,%d dias",edad,mes,dia);
-	
-		  }
-		  
+		diaN = lector.nextInt();
 
-}
+		System.out.printf("fecha Nacimiento: %d/%d/%d ", AñoN, MesN, diaN);
+		System.out.println();
+
+		edad = AñoA - AñoN; /// cuantos años a cumplido formula//edad
+
+		if(AñoA==AñoN) {
+			edad=edad;
+		}if (MesN > MesA) { // comprobar edad es verdadero
+			edad = edad - 1;
+		} else if (MesN == MesA) {
+			if (diaN > diaA) {
+				edad = edad - 1;
+			} else {
+				edad = edad;
+			}
+		}
+	
+		int  dias_mes_nacimiento=0;
+		
+		int diaMA=(MesA-1); //Calculo mes Anterior
+	
+		if ((diaMA == 1 || diaMA == 3 || diaMA == 5 || diaMA == 7 || diaMA == 8 || MesN == 10 || diaMA == 0)){
+		dias_mes_nacimiento = 31;
+		}else if ((diaMA == 4 || diaMA == 6 || diaMA == 9 || diaMA == 11)) { //los meses que tiene 31 dias
+		dias_mes_nacimiento = 30;
+		
+		}if ((diaMA == 2 ) && AñoA % 4 == 0) { // bisisesto
+		dias_mes_nacimiento = 29;
+		} else if (diaMA == 2 ) { // normal
+			dias_mes_nacimiento = 28;
+		
+		}
+		
+			mes=MesN-MesA;
+				
+			if(MesN>MesA) {  //mes
+			if(diaN>diaA) {
+				mes=11-mes;//mesA-mesN+12-1=11-mes
+			}else if(diaA>diaN){
+				mes=12-mes;
+			}
+		}else if(MesA>MesN){
+			if(diaN>diaA) {
+				mes=(MesA-MesN)-1;
+			}else if(diaA>diaN){
+				mes=MesA-MesN;;
+			}
+		}else if (MesN==MesA) {
+			mes=0;
+			if(diaN>diaA) {
+				mes=11-mes; //(mesA-mesN)+12-1=11-mes
+			}else if(diaA>diaN){
+				mes=mes;
+			}
+			
+		}
+			if(diaN>diaA) {
+				dia=dias_mes_nacimiento+diaA-diaN;
+				}
+				
+				else if(diaN<=diaA) {
+				dia=diaA-diaN;
+		}
+		System.out.printf("Su edad es: %d años,%d meses ,%d dias", edad, mes, dia);
+		
+		}
+	}
+
+
+
