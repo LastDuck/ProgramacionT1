@@ -8,6 +8,8 @@ public class Main2 {
 		// TODO Auto-generated method stub
 
 		//prueba 2
+		System.out.println("\tCalculador");
+		
 		Scanner lector=new Scanner(System.in);
 		double sumap=0,sumai=0;
 		double promedio = 0,ci=0;
