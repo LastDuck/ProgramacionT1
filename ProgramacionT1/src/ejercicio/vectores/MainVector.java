@@ -26,6 +26,7 @@ public class MainVector {
 				miVec1[1]=0;
 				miVec1[2]=0;
 				//  miVec1[3]=0; Esta es una mala asignacion porque esta fuera de rango de la posicion 3.
+				
 	
      	//5 .declarar un vector miVec2[4] de tipo char , y asignamos la letra A a la posicion 0 ,1 .
 				
@@ -37,7 +38,7 @@ public class MainVector {
 			System.out.println("Impresion1 : "+miVec2[0]);
 			miVec2[0]='Z';
 			System.out.println("Impresion2 : "+miVec2[0]);
-			System.out.print(miVec2);
+			//System.out.print(miVec2);  imprime toda el vector
 	}
 
 }

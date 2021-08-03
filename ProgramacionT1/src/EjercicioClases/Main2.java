@@ -6,7 +6,7 @@ public class Main2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//Excelente trabajo compañero
+        //Excelente trabajo compañero
 		Scanner lector =new Scanner(System.in);
 		System.out.println("Ingresa la cantidad de líneas para el triángulo:");
 		int linea=lector.nextInt();

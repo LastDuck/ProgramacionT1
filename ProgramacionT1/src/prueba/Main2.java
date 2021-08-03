@@ -26,7 +26,7 @@ public class Main2 {
 				sumai=sumai+valor;
 				ci++;
 				promedio=sumai/ci;
-			}
+			} 
 		}
 		System.out.println("la suma es :"+sumap);
 		System.out.printf("El promedio es %.4f :",promedio);
