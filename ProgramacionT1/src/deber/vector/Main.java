@@ -28,18 +28,32 @@ public class Main {
 		int[] y=new int[10];
 	for(int i=0;i<10;i++) {
 		
-		int R=i%2;
+		  if(i % 2 == 0){
 
-		if(R!=0) {
-			Z[i]=i;
-			System.out.println("la posicion :"+ i);	
-			}
-			
+              System.out.println(i);
+              y[i]=i;
+
+              }
+		
 		}
 //		7.Declara un vector H(10) y asignar solo a las posiciones impares letras que inician desde la A secuencialmente
 	int[] H=new int[10];
+	for(int i=0;i<10;i++) {
+		
+		  if(i % 2 == 0){
+
+            
+            }else {
+            	
+            	System.out.println(i);
+                y[i]=i;
+
+            }
+		
+		}
 	
-//		8Declarar un vector F(10) y en base al ejercicio anterior asignar los valores de la siguiente manera:
+	
+//		8.Declarar un vector F(10) y en base al ejercicio anterior asignar los valores de la siguiente manera:
 //		F[0]=H[3]
 //		F[3]=H[2]
 //		F[4]=H[6]
@@ -48,17 +62,41 @@ public class Main {
 //		F[9]=H[9]
 //
 //		9. Declara un vector L(15) y asignar valores en base a los siguiente:
+
 //		L[0]= (promedio de 3,5,7 y 9)
 //		L[4]= (la suma de 5, 7, 8 y 15)
 //		L[7]= (la multiplicación de 6, 7 y 3)
 //		L[10]= (la división de 10/2)
+	int[] L=new int[15];
+	int promedio=(3+5+7+9)/4;
+	int suma =5+7+8+15;
+	int multiplicacion=6*7*3;
+	int division=10/2;
+	L[0]=promedio;
+	L[4]=suma;
+	L[7]=multiplicacion;
+	L[10]=division;
+	
 //
 //		10. Declarar un vector N(12) y realizar las siguientes asignaciones:
+
 //		N[0]= (promedio de 3,10 y 9)
 //		N[4]= (la suma de 7, 8 y 10)
 //		N[12]= (la multiplicación de 5, 7 y 3)
 //		N[20]= (la suma de 7, -3 y 8)
 //		en la última posición el valor de 20/4
+	int[] N=new int[12];
+	int promedio1=(3+10+9)/3;
+	int suma1 =7+8+10;
+	int multiplicacion1=5*7*3;
+	int suma2=7-3+8;
+	int division1=10/2;
+	N[0]=promedio1;
+	N[4]=suma1;
+	N[12]=multiplicacion1;     //nos da uneeror xq no existe el rango del vectorN[12]
+	N[20]=suma2;              //nos da uneeror xq no existe el rango del vectorN[20]
+	N[11]=division1;
+	
 	}
 
 }

@@ -24,7 +24,7 @@ public class MainVector2 {
 			X[i]=n;
 			
 		}//recorrido el vector lleno
-		for(char i=0;i<N;i++) {
+		for(int i=0;i<N;i++) {
 			System.out.println("el valor de la posicion :"+ i);
 			System.out.println(X[i]);
 		}
