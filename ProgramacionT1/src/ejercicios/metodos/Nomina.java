@@ -6,6 +6,7 @@ public class Nomina {
 		// TODO Auto-generated method stub
 
 		Impresora impresio1=new Impresora();  //instanciar la clase Impresora
+		
 		impresio1.imprimir("juan perez  :1200$", 9);
 		
 	}
