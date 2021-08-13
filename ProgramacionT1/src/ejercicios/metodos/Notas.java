@@ -7,6 +7,7 @@ public class Notas {
 
 		Impresora impresio1=new Impresora();  //instanciar la clase Impresora
 		impresio1.imprimir("NOtas en proceso", 8);
+		
 	}
 
 }

@@ -6,8 +6,8 @@ public class Matriculacion {
 		// TODO Auto-generated method stub
 
 	
-		Impresora impresio1=new Impresora();
-		impresio1.imprimir("\"Programacion1\"18", 10);
+		Impresora impresio1=new Impresora();  //instanciar la clase Impresora
+		impresio1.imprimir("Matriculacion Exitosa", 10);
 	}
 
 }
