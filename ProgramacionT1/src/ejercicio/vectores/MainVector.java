@@ -13,6 +13,7 @@ public class MainVector {
 		
 		char miVector1[]=new char [5];
 		
+		
 		//3.declarar un vector miVec [4] de tipo char , y asignamos la letra A a la posicion 0 y 2
 		
 		char miVec[]=new char [4];
