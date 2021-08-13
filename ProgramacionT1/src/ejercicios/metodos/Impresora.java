@@ -2,7 +2,7 @@ package ejercicios.metodos;
 
 public class Impresora {
 
-
+	public String color;
 	
 	public void imprimir(String datosAImprimir ,int letra ) {
 		System.out.println("Logo UCE");
