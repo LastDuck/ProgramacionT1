@@ -1,5 +1,5 @@
 package ejercicio.herencia;
 
-public class Profesor {
+public class Profesor extends Persona{
 
 }
